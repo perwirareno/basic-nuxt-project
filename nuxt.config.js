@@ -35,12 +35,15 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // Toast
+    '@nuxtjs/toast',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    // baseURL: '/',
+    baseURL: 'http:localhost:8000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -50,5 +53,19 @@ export default {
   server: {
     port: 3000, // default: 3000
     host: "localhost" // default: localhost
+  },
+
+  // Toast
+  toast: {
+    position: 'top-right',
+    register: [ // Register custom toasts
+      {
+        name: 'my-error',
+        message: 'Oops...Something went wrong',
+        options: {
+          type: 'error'
+        }
+      }
+    ]
   }
 }

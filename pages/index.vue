@@ -1,9 +1,9 @@
 <template>
-  <Tutorial />
+  <MasterArea />
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'AreaPage',
 }
 </script>
