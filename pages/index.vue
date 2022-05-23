@@ -1,9 +1,9 @@
 <template>
-  <MasterArea />
+  <Menus-AllMenus />
 </template>
 
 <script>
 export default {
-  name: 'AreaPage',
+  name: 'AllMenus',
 }
 </script>

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'basic-nuxt-project',
+    title: 'Revamp Jarcol',
     htmlAttrs: {
       lang: 'en',
     },
@@ -43,29 +43,30 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     // baseURL: '/',
-    baseURL: 'http:localhost:8000'
+    // Going to API Laravel
+    baseURL: 'http://localhost:8000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   // Set up port and host in server 
-  server: {
-    port: 3000, // default: 3000
-    host: "localhost" // default: localhost
-  },
+  // server: {
+  //   port: 3000, // default: 3000
+  //   host: "localhost" // default: localhost
+  // },
 
   // Toast
-  toast: {
-    position: 'top-right',
-    register: [ // Register custom toasts
-      {
-        name: 'my-error',
-        message: 'Oops...Something went wrong',
-        options: {
-          type: 'error'
-        }
-      }
-    ]
-  }
+  // toast: {
+  //   position: 'top-right',
+  //   register: [ // Register custom toasts
+  //     {
+  //       name: 'my-error',
+  //       message: 'Oops...Something went wrong',
+  //       options: {
+  //         type: 'error'
+  //       }
+  //     }
+  //   ]
+  // }
 }

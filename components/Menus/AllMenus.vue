@@ -16,6 +16,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <b-nav-item to="/master_area">Master Area</b-nav-item>
+            <b-nav-item to="/master_cabang">Master Cabang</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -37,6 +38,6 @@ body {
 <!-- Script -->
 <script>
 export default {
-  name: 'MasterArea',
+  name: 'AllMenus',
 }
 </script>

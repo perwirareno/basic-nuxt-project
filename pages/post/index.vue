@@ -3,18 +3,25 @@
     <b-row>
       <b-col md="12">
         <b-card class="shadow-md border-0 rounded-lg">
-          <h5>Master Area</h5>
+          <h5>DATA POSTS</h5>
           <hr />
-
-          <!-- Modal -->
-          <Area-AddMasterArea />
-
+          <b-button pill variant="danger" class="mb-3" @click="goToPrev()"
+            >Kembali</b-button
+          >
+          <b-button
+            :to="{ name: 'post-create' }"
+            pill
+            variant="primary"
+            class="mb-3"
+            >Tambah Area</b-button
+          >
+          <!-- <b-table striped bordered hover :items="items" :fields="fields" show-empty></b-table> -->
           <b-table
             striped
             bordered
             hover
-            :items="items_name"
-            :fields="fields_name"
+            :items="posts"
+            :fields="fields"
             show-empty
           ></b-table>
         </b-card>
@@ -23,30 +30,20 @@
   </b-container>
 </template>
 
-<style>
-header,
-h2 {
-  margin-bottom: 20px;
-}
-.modal-area {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-</style>
-
 <script>
 export default {
-  components: {},
   data() {
     return {
       //header table
-      items_name: [],
-      fields_name: ['kode area', 'nama area', 'actions'],
+      fields: ['title', 'content', 'actions'],
       //posts data
       posts: [],
+    }
+  },
+
+  methods: {
+    goToPrev() {
+      this.$router.go(-1)
     }
   },
 
@@ -64,3 +61,6 @@ export default {
   },
 }
 </script>
+
+<style>
+</style>
